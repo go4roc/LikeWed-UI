@@ -1,6 +1,6 @@
 {
-  "name": "ht",
-  "description": "HT Wed WebSite UI CORE CSS & JS.",
+  "name": "likewed",
+  "description": "LikeWed WebSite UI CORE CSS & JS.",
   "version": "0.0.1",
   "keywords": [
     "css",
@@ -12,19 +12,12 @@
     "web"
   ],
   "homepage": "http://www.likewed.com",
-  "author": "HT Tech, Inc.",
-  "scripts": {
-    "test": "grunt test"
-  },
-  "style": "dist/css/ht.css",
-  "less": "less/ht.less",
-  "main": "./dist/js/npm",
+  "author": "Rock Peng",
+  "style": "dist/css/likewed.css",
+  "less": "likewed.less",
   "repository": {
     "type": "git",
     "url": "https://github.com/go4roc/LikeWed-UI"
-  },
-  "bugs": {
-    "url": "https://github.com/go4roc/LikeWed-UI/issues"
   },
   "devDependencies": {
     "btoa": "~1.1.2",
@@ -58,21 +51,5 @@
   },
   "engines": {
     "node": "~0.10.1"
-  },
-  "jspm": {
-    "main": "js/bootstrap",
-    "directories": {
-      "example": "examples",
-      "lib": "dist"
-    },
-    "shim": {
-      "js/bootstrap": {
-        "imports": "jquery",
-        "exports": "$"
-      }
-    },
-    "buildConfig": {
-      "uglify": true
-    }
   }
 }

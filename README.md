@@ -1,1 +1,1 @@
-# HT Wed WebSite UI Core CSS & JS
+# LikeWed WebSite UI Core CSS & JS
