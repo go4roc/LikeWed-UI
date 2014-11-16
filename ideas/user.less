@@ -1,5 +1,5 @@
 div.profile-dash {
-	margin-top: -20px;
+	margin-top: 0px;
 	width: 100%;
 	min-height: 29px;
 	border-bottom: 1px solid #e5e5e5;
@@ -7,10 +7,42 @@ div.profile-dash {
 }
 
 div.profile-dash div.profile-dash-inner {
-	max-width: 970px;
-	margin: 0 auto;
-	padding: 0 12px;
-	z-index: 3;
+	width: auto;
+	text-align: center;
+}
+
+div.profile-dash ul.profile-stats>li {
+	float: none;
+	display: inline;
+	margin: 0 5px;
+	padding: 0;
+	font-size: 10px;
+	line-height: 1;
+	border-right: none;
+}
+
+@media (min-width: @screen-sm-min) { 
+	div.profile-dash {
+		margin-top: -20px;
+	}
+}
+
+@media (min-width: @screen-md-min) { 
+	div.profile-dash {
+		margin-top: -20px;
+	}
+
+   div.profile-dash div.profile-dash-inner {
+		text-align: left;
+	}
+
+	ul.profile-stats > li {
+		float: left;
+		margin: 0 8px 0 0;
+		padding: 0 8px 0 0;
+		font-size: 12px;
+		line-height: 1;
+	}
 }
 
 ul.profile-stats {
@@ -19,13 +51,6 @@ ul.profile-stats {
 	list-style: none;
 }
 
-ul.profile-stats>li {
-	float: left;
-	margin: 0 8px 0 0;
-	padding: 0 8px 0 0;
-	font-size: 12px;
-	line-height: 1;
-}
 
 ul.profile-stats>li:last-child {
 	margin-right: 0;
@@ -95,11 +120,22 @@ div.profile-head h1 a.url {
 
 div.profile-head h1 img.photo {
 	width: 80px;
-	margin: -60px auto 10px auto;
+	margin: 0 auto 10px auto;
 	box-shadow: inset 0 0 0 -2px rgba(255, 255, 255, 0.48),0 0 0 1px rgba(0, 0, 0, 0.14),0 0 0 8px white;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
+}
+
+@media (min-width: @screen-md-min) { 
+	div.profile-head h1 img.photo {
+		width: 80px;
+		margin: -60px auto 10px auto;
+		box-shadow: inset 0 0 0 -2px rgba(255, 255, 255, 0.48),0 0 0 1px rgba(0, 0, 0, 0.14),0 0 0 8px white;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+	}
 }
 
 div.profile-head h2.bio {

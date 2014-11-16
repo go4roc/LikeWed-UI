@@ -1333,27 +1333,47 @@ a.editable-click.editable-disabled:hover {
 div.profile-dash {
   width: 100%;
   min-height: 29px;
-  margin-top: -20px;
+  margin-top: 0;
   background: rgba(255, 255, 255, .6);
   border-bottom: 1px solid #e5e5e5;
 }
 div.profile-dash div.profile-dash-inner {
-  z-index: 3;
-  max-width: 970px;
-  padding: 0 12px;
-  margin: 0 auto;
+  width: auto;
+  text-align: center;
+}
+div.profile-dash ul.profile-stats > li {
+  display: inline;
+  float: none;
+  padding: 0;
+  margin: 0 5px;
+  font-size: 10px;
+  line-height: 1;
+  border-right: none;
+}
+@media (min-width: 768px) {
+  div.profile-dash {
+    margin-top: -20px;
+  }
+}
+@media (min-width: 992px) {
+  div.profile-dash {
+    margin-top: -20px;
+  }
+  div.profile-dash div.profile-dash-inner {
+    text-align: left;
+  }
+  ul.profile-stats > li {
+    float: left;
+    padding: 0 8px 0 0;
+    margin: 0 8px 0 0;
+    font-size: 12px;
+    line-height: 1;
+  }
 }
 ul.profile-stats {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-ul.profile-stats > li {
-  float: left;
-  padding: 0 8px 0 0;
-  margin: 0 8px 0 0;
-  font-size: 12px;
-  line-height: 1;
 }
 ul.profile-stats > li:last-child {
   padding-right: 0;
@@ -1413,10 +1433,19 @@ div.profile-head h1 a.url {
 }
 div.profile-head h1 img.photo {
   width: 80px;
-  margin: -60px auto 10px auto;
+  margin: 0 auto 10px auto;
   border-radius: 50%;
   -webkit-box-shadow: inset 0 0 0 -2px rgba(255, 255, 255, .48), 0 0 0 1px rgba(0, 0, 0, .14), 0 0 0 8px #fff;
           box-shadow: inset 0 0 0 -2px rgba(255, 255, 255, .48), 0 0 0 1px rgba(0, 0, 0, .14), 0 0 0 8px #fff;
+}
+@media (min-width: 992px) {
+  div.profile-head h1 img.photo {
+    width: 80px;
+    margin: -60px auto 10px auto;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 0 0 0 -2px rgba(255, 255, 255, .48), 0 0 0 1px rgba(0, 0, 0, .14), 0 0 0 8px #fff;
+            box-shadow: inset 0 0 0 -2px rgba(255, 255, 255, .48), 0 0 0 1px rgba(0, 0, 0, .14), 0 0 0 8px #fff;
+  }
 }
 div.profile-head h2.bio {
   padding: 8px 15% 0 15%;
