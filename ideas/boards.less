@@ -1,0 +1,240 @@
+//
+// Boards
+// --------------------------------------------------
+
+
+/** boards **/
+.board a, .board a:focus, .board a:hover {
+	color: #999;
+}
+
+.boards .board {
+	min-height: 280px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.boards .board .cover-picture {
+	overflow: hidden;
+	margin-bottom: 4px;
+	position: relative;
+	min-height: 160px;
+	background: url("http://www.likewed.com/img/loading.gif") no-repeat center center #f5f5f5;
+}
+
+.boards .board .cover-picture .group-count {
+	background: url(http://res.htwed.com/images/icon-group.png) no-repeat scroll 10px center #FFF;
+	bottom: 10px;
+	height: 35px;
+	line-height: 35px;
+	position: absolute;
+	right: 0;
+	text-indent: 30px;
+	width: 56px;
+	z-index: 100;
+	color: #333;
+}
+
+.boards .board .small-imgs {
+	position: relative;
+	margin-left: -2px;
+	margin-right: -2px;
+}
+
+.boards .board .small-imgs .small-img {
+	float: left;
+	padding-left: 2px;
+	padding-right: 2px;
+	min-height: 30px;
+	width: 25%
+}
+
+.list-group-item.caption {
+	padding: 10px;
+	margin-top: -1px;
+	border-top: medium none;
+}
+
+.list-group-item.caption h5 {
+	margin: 0 0 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: left;
+}
+
+.caption .author-info, .caption .author-info a{
+	color: #666;
+	line-height: 30px;
+}
+
+.caption .author-info .author-avatar {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.caption .author-info .author-avatar a>img, .caption .author-info .author-avatar >img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.list-group-item .stat-count {
+	color: #999;
+}
+
+.list-group-item .stat-count .glyphicon{
+	margin-left: 10px;
+	margin-right: 2px;
+}
+
+.list-group-item .actions a.stick {
+	color: #d9534f;
+}
+
+.board-banner {
+	margin-bottom: 20px;
+	background: #e9e8e6 url(http://res.htwed.com/v4.0.0/img/ideas-board-banner.jpg) top center no-repeat;
+}
+
+.board-banner .container {
+	position: relative;
+	padding-left: 10px;
+	height: 180px;
+}
+
+.board-banner .cover {
+	margin-top: 10px;
+    width: 18%;
+    float: left;
+    position: relative;
+}
+
+.board-banner .cover a {
+	display: block;
+	position: relative;
+	bottom: 0px;
+}
+
+.board-banner .cover img {
+}
+
+.board-banner .caption {
+	margin-top: px;
+    float: left;
+    width: 100%;
+}
+
+.board-banner .caption h1 {
+	overflow: hidden;
+	font-size: 18px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.board-banner .caption .description {
+    max-height: 36px;
+    font-size: 12px;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+}
+
+.board-banner .list-inline > li a {
+	font-size: 12px;
+}
+
+.board-pics {
+	margin-left: -10px;
+}
+
+@media (min-width: 768px) {
+	.board-banner .container {
+		padding-left: 30px;
+		height: 192px;
+	}
+
+	.board-banner .cover {
+		margin-top: 30px;
+		width: 26%;
+	}
+
+	.board-banner .cover img {
+		width: 160px;
+		height: 160px;
+	}
+
+	.board-banner .caption {
+		margin-top: 12px;
+		width: 74%;
+	}
+
+	.board-banner .caption h1 {
+		font-size: 28px;
+		font-weight: 300;
+	}
+	.board-banner .caption .description {
+    	max-height: 36px;
+    	text-overflow: ellipsis;
+	}
+}
+
+@media (min-width: 992px) {
+	.board-banner .container {
+		padding-left: 30px;
+		height: 192px;
+	}
+
+	.board-banner .cover {
+		margin-top: 30px;
+		width: 20%;
+	}
+
+	.board-banner .caption {
+		margin-top: 12px;
+		width: 80%;
+	}
+
+	.board-banner .caption h1 {
+		font-size: 28px;
+		font-weight: 300;
+	}
+	.board-banner .caption .description {
+    	max-height: 36px;
+    	text-overflow: ellipsis;
+	}
+}
+
+@media (min-width: 1200px) {
+	.board-banner .container {
+		padding-left: 30px;
+		height: 230px;
+	}
+
+	.board-banner .cover {
+		margin-top: 50px;
+		width: 18%;
+	}
+
+	.board-banner .cover img {
+		width: 180px;
+		height: 180px;
+	}
+
+	.board-banner .caption {
+		margin-top: 32px;
+		width: 82%;
+	}
+
+	.board-banner .caption h1 {
+		font-size: 32px;
+		font-weight: 300;
+	}
+
+	.board-banner .caption .description {
+    	max-height: 36px;
+    	text-overflow: ellipsis;
+	}
+
+}

@@ -9,7 +9,48 @@
         background-color: @box-bg;
 
         .image {
+            position: relative;
             border: 1px solid rgba(0, 0, 0, 0.08);
+            
+            .hover-box {
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 101;
+                display: none;
+                width: 100%;
+                
+                .actions-box {
+                    margin-top: 12px;
+                    margin-right: 12px;
+                }
+            }
+    
+            .opactiy-box {
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 1;
+                display: none;
+                height: 100%;
+                width: 100%;
+                
+                .actions-box {
+                    margin-top: 12px;
+                    margin-right: 12px;
+                }
+            }
+            
+            &:hover {
+                .opactiy-box {
+                    display: block;
+                    background: none repeat scroll 0 0 rgba(0,0,0,.3);
+                }
+
+                .hover-box {
+                    display: block;
+                }
+            }
         }
 
         .desc {
@@ -53,15 +94,26 @@
                 padding: 10px 10px 10px 5px;
                 margin-bottom: 0;
                 .clearfix();
-
-                li {
                 
+                li {
                     border-left: 1px solid #d9d9d9;
                     text-align: center;
-
+                    
+                    span {
+                        color: #999;
+                    }
+                    
                     &.stats {
                         text-align: right;
                         color: #999;
+
+                        span {
+                            margin-right: 5px;
+                        }
+
+                        span:last-child {
+                            margin-right: 0;
+                        }
                     }
 
                     &:first-child {

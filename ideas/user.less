@@ -207,6 +207,7 @@ div.main-cotent-inner {
 	height: 36px;
 	padding: 0px 20px;
 	line-height: 36px;
+	margin-bottom: 20px;
 }
 
 #daren-filter a.tab.active {
@@ -215,8 +216,11 @@ div.main-cotent-inner {
 }
 
 #daren {
-	.user-info {
+	.daren {
 		padding-bottom: 30px;
+	}
+
+	.user-info {
 		.clearfix();
 
 		.avatar {
@@ -308,8 +312,16 @@ div.main-cotent-inner {
 
 #daren .user-pins {
 	position: relative;
-    width: 380px;
-    margin-top: 24px;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: -3px;
+}
+
+#daren .user-pins a {
+	display: block;
+	position: relative;
+    width: 100%;
+    margin-top: 10px;
 }
 
 #daren .user-pins img {
@@ -317,16 +329,57 @@ div.main-cotent-inner {
 }
 
 #daren .user-pins img.l {
-    width: 242px;
-    height: 242px;
+    width: 33.33%;
+    height: auto;
 }
 
 #daren .user-pins img.s {
-    width: 120px;
-    height: 120px;
-    margin-left: 3px;
+   	width: 33.33%;
+    height: auto;
+    margin-left: 0;
+    padding-left: 3px;
 }
 
 #daren .user-pins img.s0 {
-    margin-top: 3px;
+    margin-top: 0;
 }
+
+@media (min-width: @screen-md-min) { 
+	#daren .user-pins {
+		margin-left: 0;
+	}
+
+    #daren .user-pins img.l {
+	    width: 198px;
+	    height: 199px;
+	}
+
+	#daren .user-pins img.s {
+	    width: 98px;
+	    height: 98px;
+	    margin-left: 3px;
+	    padding-left: 0;
+	}
+
+	#daren .user-pins img.s0 {
+	    margin-top: 3px;
+	}
+}
+
+@media (min-width: @screen-lg-min) { 
+    #daren .user-pins img.l {
+	    width: 252px;
+	    height: 253px;
+	}
+
+	#daren .user-pins img.s {
+	    width: 125px;
+	    height: 125px;
+	    margin-left: 3px;
+	}
+
+	#daren .user-pins img.s0 {
+	    margin-top: 3px;
+	}
+}
+

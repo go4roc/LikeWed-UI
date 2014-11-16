@@ -2058,6 +2058,13 @@ hr {
   overflow: visible;
   clip: auto;
 }
+.fa {
+  margin-right: 4px;
+}
+.like.active,
+.pin.active {
+  color: #e9573e;
+}
 h1,
 h2,
 h3,
@@ -6498,7 +6505,40 @@ a.list-group-item-danger.active:focus {
   background-color: #fff;
 }
 .box .box-inner .image {
+  position: relative;
   border: 1px solid rgba(0, 0, 0, .08);
+}
+.box .box-inner .image .hover-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 101;
+  display: none;
+  width: 100%;
+}
+.box .box-inner .image .hover-box .actions-box {
+  margin-top: 12px;
+  margin-right: 12px;
+}
+.box .box-inner .image .opactiy-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.box .box-inner .image .opactiy-box .actions-box {
+  margin-top: 12px;
+  margin-right: 12px;
+}
+.box .box-inner .image:hover .opactiy-box {
+  display: block;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, .3);
+}
+.box .box-inner .image:hover .hover-box {
+  display: block;
 }
 .box .box-inner .desc {
   overflow: hidden;
@@ -6556,9 +6596,18 @@ a.list-group-item-danger.active:focus {
   text-align: center;
   border-left: 1px solid #d9d9d9;
 }
+.box .box-inner .desc ul.actions li span {
+  color: #999;
+}
 .box .box-inner .desc ul.actions li.stats {
   color: #999;
   text-align: right;
+}
+.box .box-inner .desc ul.actions li.stats span {
+  margin-right: 5px;
+}
+.box .box-inner .desc ul.actions li.stats span:last-child {
+  margin-right: 0;
 }
 .box .box-inner .desc ul.actions li:first-child {
   border-left: none;
