@@ -1210,7 +1210,10 @@ div.tagsinput div {
   margin-top: 10px;
 }
 #idea-boards {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+#idea-boards .section {
+  margin-bottom: 20px;
 }
 .idea-block .block-title {
   padding: 0 10px;
