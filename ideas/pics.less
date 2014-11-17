@@ -1,3 +1,7 @@
+//
+// Boards
+// --------------------------------------------------
+
 .editable-click, 
 a.editable-click, 
 a.editable-click:hover {
@@ -8,35 +12,330 @@ a.editable-click:hover {
 .editable-click.editable-disabled, 
 a.editable-click.editable-disabled, 
 a.editable-click.editable-disabled:hover {
-   color: #585858;  
-   cursor: default;
-   border-bottom: none;
+     color: #585858;  
+     cursor: default;
+     border-bottom: none;
 }
 
 .editable-empty, .editable-empty:hover, .editable-empty:focus{
-  font-style: italic; 
-  color: #DD1144;  
-  /* border-bottom: none; */
-  text-decoration: none;
+    font-style: italic; 
+    color: #DD1144;  
+    /* border-bottom: none; */
+    text-decoration: none;
 }
 
 .editable-input-empty {
-	width: 120px;
+    width: 120px;
 }
 
 .select2-container {
-	min-width: 320px;
+    min-width: 320px;
 }
 
 .cates-title {
-	margin-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .cates-item {
-	margin-bottom: 5px;
-	margin-top: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .pic-container img {
-  margin: 0 auto;
+    margin: 0 auto;
 }
+
+
+
+// 
+// pin modal
+// == 
+
+#pin-modal .modal-dialog {
+    margin-top: 10%;
+} 
+
+#pin-modal .pin-preview {
+    position: relative;
+    overflow: hidden;
+    background: #F5F5F5;
+    line-height: 232px;
+    height: 232px;
+    border: 1px solid #d8d8d8;
+}
+
+#pin-modal .pin-preview img {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    vertical-align: middle;
+    position: absolute;
+}
+
+#pin-modal .loading {
+    position: relative;
+    overflow: hidden;
+    background: #F5F5F5;
+    line-height: 232px;
+    height: 232px;
+}
+
+#pin-modal .loading img {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    vertical-align: middle;
+    position: absolute;
+}
+
+#pin-modal .modal-body {
+    img {
+        width: 256px;
+        height: 256px;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+
+    >form {
+        margin-left: 270px;
+
+        h5 {
+            margin: 0;
+            padding: 7px;
+            border-radius: 3px 3px 0 0;
+            color: white;
+            background: #048ac2;
+        }
+        
+        ul {
+            overflow: auto;
+            height: 176px;
+            border: solid #eeeeee;
+            border-width: 0 1px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                position: relative;
+                color: #999999;
+
+                label {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    display: block;
+                    width: 100%;
+                    margin: 0;
+                    padding: 7px;
+                    padding-right: 32px;
+                    cursor: pointer;
+                    font-weight: normal;
+
+                    &.selected {
+                        background: #f1f1f1;
+                    }
+                    &:hover {
+                        background: #dcddde;
+                        border-radius: 3px;
+                    }
+                }
+
+                .fa-check {
+                    margin-right: 0;
+                    position: absolute;
+                    top: 9px;
+                    right: 12px;
+                }
+
+                input {
+                    height: 0;
+                    width: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+    
+        > fieldset {
+            padding: 10px 7px 7px;
+            border: 1px solid #eeeeee;
+
+            .input-group {
+                width: 100%;
+            }
+            
+            .input-group-btn {
+                width: 1%;
+            }
+
+            input, button {
+                height: 32px;
+                font-size: 13px;
+            }
+        }
+
+        select {
+            margin: 0;
+            border: none;
+            overflow: auto;
+            height: 170px;
+            border: solid #eeeeee;
+            border-width: 0 1px;
+
+            option {
+                color: #999999;
+                display: block;
+                width: 100%;
+                margin: 0;
+                padding: 7px;
+                padding-right: 32px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #ebe8e8;
+                }
+            }
+
+            option[selected] {
+                background: #cb2027;
+                color: #fff;
+            }
+        }
+    }
+}
+
+// #pin-modal .boards {
+//     height: 208px;
+// }
+
+
+// #pin-modal .board-list {
+//     position: relative;
+//     width: 100%;
+
+//     .current {
+//         position: relative;
+//         display: block;
+//         background-color: #f0eded;
+//         background: -moz-linear-gradient( #FAFAFA, #F2F2F2);
+//         background: -o-linear-gradient( #FAFAFA, #F2F2F2);
+//         background: -webkit-linear-gradient( #FAFAFA, #F2F2F2);
+//         background: linear-gradient( #FAFAFA, #F2F2F2);
+//         cursor: pointer;
+//         border: 1px solid #CCC;
+//         font-size: 16px;
+//         border-radius: 3px;
+//         box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+//         -moz-box-sizing: border-box;
+//         box-sizing: border-box;
+//         width: 100%;
+        
+//         &:hover {
+//             background-color: #ebe8e8;
+//             background: -moz-linear-gradient(#FFF, #F7F7F7);
+//             background: -o-linear-gradient(#FFF, #F7F7F7);
+//             background: -webkit-linear-gradient(#FFF, #F7F7F7);
+//             background: linear-gradient(#FFF, #F7F7F7);
+//             box-shadow: inset 0 1px 2px rgba(0,0,0,.05);
+//         }
+
+//         .name {
+//             padding: 7px 24px 7px 12px;
+//             height: 36px;
+//             line-height: 22px;
+//             overflow: hidden;
+//             white-space: nowrap;
+//         }
+
+//         .arrow {
+//             position: absolute;
+//             top: 4px;
+//             right: 8px;
+//             width: 16px;
+//             height: 16px;
+//         }
+//     }
+
+//     .drop-list {
+//         position: absolute;
+//         z-index: 9999;
+//         top: -1px;
+//         left: -1px;
+//         overflow-x: hidden;
+//         width: 100%;
+//         height: 230px;
+//         border: 1px solid #BFBFBF;
+//         box-shadow: inset 0 1px 1px rgba(0,0,0,.1);
+//         border-radius: 3px;
+//         font-size: 16px;
+//         background: #fff;
+        
+//         .createBoard {
+//             margin: 9px 6px;
+
+//             .createBoardButton {
+//                 float: right;
+//                 padding-right: 14px;
+//             }
+
+//             .createBoardNameContainer {
+//                 overflow: hidden;
+//                 padding-right: 10px;
+
+//                 input {
+//                     width: 100%;
+//                     font-size: 14px;
+//                     color: #333;
+//                     background-color: #f2f2f2;
+//                     background: linear-gradient(#f0f0f0, #f5f5f5);
+//                     border-radius: 3px;
+//                     border: 1px solid #d6d3ce;
+//                     padding: 7px;
+//                 }
+//             }
+//         }
+
+//         .selections {
+//             width: 100%;
+//             overflow-y: scroll;
+//             bottom: 5px;
+//             color: #333;
+//             font-size: 13px;
+//             left: 5px;
+//             position: absolute;
+//             top: 55px;
+//             z-index: 751;
+
+//             ul {
+//                 margin: 0;
+//                 padding: 0;
+//                 list-style: none;
+
+//                 li {
+//                     border-radius: 3px;
+//                     white-space: nowrap;
+//                     overflow: hidden;
+//                     -ms-text-overflow: ellipsis;
+//                     text-overflow: ellipsis;
+//                     cursor: pointer;
+//                     padding: 6px 13px;
+
+//                     &.active {
+//                         background: #cb2027;
+//                         color: #fff;
+//                     }
+
+//                     &:hover {
+//                         background-color: #ebe8e8;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
