@@ -6499,7 +6499,12 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #ebccd1;
 }
 .box {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .box {
+    margin-bottom: 20px;
+  }
 }
 .box .box-inner {
   background-color: #fff;

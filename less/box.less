@@ -3,7 +3,11 @@
 // --------------------------------------------------
 
 .box {
-    margin-bottom: @line-height-computed;
+    margin-bottom: 10px;
+    
+    @media (min-width: 768px) {
+        margin-bottom: @line-height-computed;
+    }
 
     .box-inner {
         background-color: @box-bg;

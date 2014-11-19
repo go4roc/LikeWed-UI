@@ -50,10 +50,15 @@ a.editable-click.editable-disabled:hover {
 // 
 // pin modal
 // == 
-
 #pin-modal .modal-dialog {
-    margin-top: 10%;
-} 
+    margin-top: 0;
+}
+
+@media (min-width: 768px) {
+    #pin-modal .modal-dialog {
+        margin-top: 10%;
+    } 
+}
 
 #pin-modal .pin-preview {
     position: relative;
@@ -102,7 +107,7 @@ a.editable-click.editable-disabled:hover {
     }
 
     >form {
-        margin-left: 270px;
+        margin: 0;
 
         h5 {
             margin: 0;
@@ -205,6 +210,12 @@ a.editable-click.editable-disabled:hover {
                 background: #cb2027;
                 color: #fff;
             }
+        }
+    }
+
+    @media (min-width: 768px) {
+        >form {
+            margin-left: 270px;
         }
     }
 }

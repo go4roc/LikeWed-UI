@@ -1296,7 +1296,12 @@ a.editable-click.editable-disabled:hover {
   margin: 0 auto;
 }
 #pin-modal .modal-dialog {
-  margin-top: 10%;
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  #pin-modal .modal-dialog {
+    margin-top: 10%;
+  }
 }
 #pin-modal .pin-preview {
   position: relative;
@@ -1339,7 +1344,7 @@ a.editable-click.editable-disabled:hover {
   height: 256px;
 }
 #pin-modal .modal-body > form {
-  margin-left: 270px;
+  margin: 0;
 }
 #pin-modal .modal-body > form h5 {
   padding: 7px;
@@ -1429,6 +1434,11 @@ a.editable-click.editable-disabled:hover {
 #pin-modal .modal-body > form select option[selected] {
   color: #fff;
   background: #cb2027;
+}
+@media (min-width: 768px) {
+  #pin-modal .modal-body > form {
+    margin-left: 270px;
+  }
 }
 div.profile-dash {
   width: 100%;
