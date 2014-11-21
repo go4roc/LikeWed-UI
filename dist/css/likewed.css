@@ -6617,6 +6617,10 @@ a.list-group-item-danger.active:focus {
 .box .box-inner .desc ul.actions li:first-child {
   border-left: none;
 }
+.box .box-inner .desc ul.actions a.active,
+.box .box-inner .desc ul.actions a:hover {
+  color: #e9573e;
+}
 .embed-responsive {
   position: relative;
   display: block;
