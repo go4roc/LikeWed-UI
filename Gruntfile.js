@@ -38,7 +38,8 @@ module.exports = function (grunt) {
             },
             build: 'build',
             dist: 'dist',
-            ideasDist: '../LikeWed-Ideas/public/core'
+            ideasDist: '../LikeWed-Ideas/public/core',
+            mainDist: '../LikeWed-Main/public/core'
         },
 
         jshint: {
@@ -136,6 +137,17 @@ module.exports = function (grunt) {
                 },
                 src: 'ideas/ideas.less',
                 dest: 'dist/css/<%= pkg.name %>.ideas.css'
+            },
+            compileMain: {
+                options: {
+                    strictMath: true,
+                    sourceMap: true,
+                    outputSourceFiles: true,
+                    sourceMapURL: '<%= pkg.name %>.main.css.map',
+                    sourceMapFilename: 'dist/css/<%= pkg.name %>.main.css.map'
+                },
+                src: 'main/main.less',
+                dest: 'dist/css/<%= pkg.name %>.main.css'
             }
         },
 
@@ -154,6 +166,12 @@ module.exports = function (grunt) {
                     map: true
                 },
                 src: 'dist/css/<%= pkg.name %>.ideas.css'
+            },
+            main: {
+                options: {
+                    map: true
+                },
+                src: 'dist/css/<%= pkg.name %>.main.css'
             }
         },
 
@@ -180,6 +198,10 @@ module.exports = function (grunt) {
             minifyIdeas: {
                 src: 'dist/css/<%= pkg.name %>.ideas.css',
                 dest: 'dist/css/<%= pkg.name %>.ideas.min.css'
+            },
+            minifyMain: {
+                src: 'dist/css/<%= pkg.name %>.main.css',
+                dest: 'dist/css/<%= pkg.name %>.main.min.css'
             }
         },
 
@@ -207,6 +229,12 @@ module.exports = function (grunt) {
                 cwd: 'dist/',
                 src: '**',
                 dest: '../LikeWed-Ideas/public/core/'
+            },
+            mainDist: {
+                expand: true,
+                cwd: 'dist/',
+                src: '**',
+                dest: '../LikeWed-Main/public/core/'
             }
         },
 
@@ -243,12 +271,16 @@ module.exports = function (grunt) {
     grunt.registerTask('dist-js', ['concat', 'uglify:core']);
 
     // CSS distribution task.
-    grunt.registerTask('less-compile', ['less:compileCore', 'less:compileIdeas']);
-    grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:ideas', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyIdeas']);
+    grunt.registerTask('less-compile', ['less:compileCore', 'less:compileMain', 'less:compileIdeas']);
+    grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:ideas', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyMain', 'cssmin:minifyIdeas']);
 
     // Full distribution task.
     grunt.registerTask('dist', ['clean:build', 'clean:dist', 'dist-css', 'copy:fonts', 'dist-js']);
 
+    // Full distribution for main task
+    grunt.registerTask('dist:main', ['clean:build', 'clean:dist', 'dist-css', 'copy:fonts', 'dist-js', 'clean:mainDist', 'copy:mainDist']); 
+
+    // Full distribution for idea task
     grunt.registerTask('dist:ideas', ['clean:build', 'clean:dist', 'dist-css', 'copy:fonts', 'dist-js', 'clean:ideasDist', 'copy:ideasDist']); 
 
     // Default task.
