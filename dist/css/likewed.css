@@ -6560,7 +6560,9 @@ a.list-group-item-danger.active:focus {
   text-align: left;
 }
 .box .box-inner .desc .author {
-  padding: 0 10px 10px 10px;
+  padding: 0 10px 0 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: #666;
 }
 .box .box-inner .desc .author a {
@@ -6613,6 +6615,9 @@ a.list-group-item-danger.active:focus {
 }
 .box .box-inner .desc ul.actions li.stats span:last-child {
   margin-right: 0;
+}
+.box .box-inner .desc ul.actions li.share {
+  text-align: center;
 }
 .box .box-inner .desc ul.actions li:first-child {
   border-left: none;
