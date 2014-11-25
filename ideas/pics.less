@@ -220,6 +220,120 @@ a.editable-click.editable-disabled:hover {
     }
 }
 
+#pic-detail .pic-page .pic-container .pic-box {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#pic-detail .aside .info {
+    margin-bottom: 0;
+    padding: 1.5em 1.5em;
+    background: #fafafa;
+    
+    .media {
+        margin-bottom: 1.5em;
+    }
+
+    .tags, .colors  {
+    }
+}
+
+#pic-detail .aside .actions {
+    margin-bottom: 1.5em;
+    background: #fafafa;
+    border-top: 1px solid #eeeeee;
+    margin-left: 0px;
+
+    > li {
+        width: 33.3333%;
+        border-right: 1px dashed #eeeeee;
+        float: left;
+        text-align: center;
+        
+        &:hover {
+            border-color: transparent;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        a {
+            padding: 1.5em 0;
+            display: block;
+            width: 100%;
+            color: #5f5f5f;
+            text-align: center;
+            text-decoration: none;
+
+            i {
+                display: block;
+                margin: 0 auto .5em;
+                font-size: 2em;
+            }
+
+            &.active {
+               color: #e9573e; 
+            }
+        }
+    }
+}
+
+#pic-detail .aside .board-lists .board {
+    margin-bottom: 1.5em;
+    background: #fafafa;
+
+    .title {
+        padding: 1em 1.5em;
+        width: 100%;
+    }
+
+    .board-cover {
+        background: white;
+        font-size: 0;
+
+        .image {
+            width: 33.3333%;
+            padding-bottom: 33.3333%;
+            position: relative;
+            display: inline-block;
+            height: 0;
+
+            >img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding: 2px;
+                box-shadow: 0 0 1px rgba(0,0,0,0.1);
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+     #pic-detail .aside .board-lists .board .board-cover .image {
+        width: 25%;
+        padding-bottom: 25%;
+    }
+}
+
+@media (min-width: 992px) {
+    #pic-detail .pic-page .pic-container .pic-box {
+        margin-bottom: 30px;
+    }
+
+    #pic-detail .aside .actions {
+        > li {
+            width: 33.3333%;
+        }
+    }
+
+    #pic-detail .aside .board-lists .board .board-cover .image {
+        width: 50%;
+        padding-bottom: 50%;
+    }
+}
 // #pin-modal .boards {
 //     height: 208px;
 // }

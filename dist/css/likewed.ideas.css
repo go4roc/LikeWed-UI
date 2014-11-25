@@ -103,7 +103,7 @@ body {
 .main {
   min-height: 500px;
   padding: 20px 0;
-  background: #f5f5f5;
+  background: #ebeced;
 }
 /** footer **/
 .footer {
@@ -1438,6 +1438,100 @@ a.editable-click.editable-disabled:hover {
 @media (min-width: 768px) {
   #pin-modal .modal-body > form {
     margin-left: 270px;
+  }
+}
+#pic-detail .pic-page .pic-container .pic-box {
+  margin-bottom: 0;
+  text-align: center;
+}
+#pic-detail .aside .info {
+  padding: 1.5em 1.5em;
+  margin-bottom: 0;
+  background: #fafafa;
+}
+#pic-detail .aside .info .media {
+  margin-bottom: 1.5em;
+}
+#pic-detail .aside .actions {
+  margin-bottom: 1.5em;
+  margin-left: 0;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+}
+#pic-detail .aside .actions > li {
+  float: left;
+  width: 33.3333%;
+  text-align: center;
+  border-right: 1px dashed #eee;
+}
+#pic-detail .aside .actions > li:hover {
+  border-color: transparent;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, .1);
+          box-shadow: inset 0 0 5px rgba(0, 0, 0, .1);
+}
+#pic-detail .aside .actions > li a {
+  display: block;
+  width: 100%;
+  padding: 1.5em 0;
+  color: #5f5f5f;
+  text-align: center;
+  text-decoration: none;
+}
+#pic-detail .aside .actions > li a i {
+  display: block;
+  margin: 0 auto .5em;
+  font-size: 2em;
+}
+#pic-detail .aside .actions > li a.active {
+  color: #e9573e;
+}
+#pic-detail .aside .board-lists .board {
+  margin-bottom: 1.5em;
+  background: #fafafa;
+}
+#pic-detail .aside .board-lists .board .title {
+  width: 100%;
+  padding: 1em 1.5em;
+}
+#pic-detail .aside .board-lists .board .board-cover {
+  font-size: 0;
+  background: white;
+}
+#pic-detail .aside .board-lists .board .board-cover .image {
+  position: relative;
+  display: inline-block;
+  width: 33.3333%;
+  height: 0;
+  padding-bottom: 33.3333%;
+}
+#pic-detail .aside .board-lists .board .board-cover .image > img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .1);
+          box-shadow: 0 0 1px rgba(0, 0, 0, .1);
+}
+@media (min-width: 768px) {
+  #pic-detail .aside .board-lists .board .board-cover .image {
+    width: 25%;
+    padding-bottom: 25%;
+  }
+}
+@media (min-width: 992px) {
+  #pic-detail .pic-page .pic-container .pic-box {
+    margin-bottom: 30px;
+  }
+  #pic-detail .aside .actions > li {
+    width: 33.3333%;
+  }
+  #pic-detail .aside .board-lists .board .board-cover .image {
+    width: 50%;
+    padding-bottom: 50%;
   }
 }
 div.profile-dash {
