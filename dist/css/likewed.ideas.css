@@ -1440,6 +1440,10 @@ a.editable-click.editable-disabled:hover {
     margin-left: 270px;
   }
 }
+#pic-detail {
+  padding-right: 0;
+  padding-left: 0;
+}
 #pic-detail .pic-page .pic-container .pic-box {
   margin-bottom: 0;
   text-align: center;
@@ -1517,6 +1521,10 @@ a.editable-click.editable-disabled:hover {
           box-shadow: 0 0 1px rgba(0, 0, 0, .1);
 }
 @media (min-width: 768px) {
+  #pic-detail {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
   #pic-detail .aside .board-lists .board .board-cover .image {
     width: 25%;
     padding-bottom: 25%;
