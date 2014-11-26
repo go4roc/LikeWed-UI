@@ -6546,7 +6546,6 @@ a.list-group-item-danger.active:focus {
   display: block;
 }
 .box .box-inner .desc {
-  overflow: hidden;
   border-right: 1px solid #dedfe0;
   border-bottom: 1px solid #dedfe0;
   border-left: 1px solid #dedfe0;
@@ -6599,27 +6598,27 @@ a.list-group-item-danger.active:focus {
 .box .box-inner .desc ul.actions:after {
   clear: both;
 }
-.box .box-inner .desc ul.actions li {
+.box .box-inner .desc ul.actions > li {
   text-align: center;
   border-left: 1px solid #d9d9d9;
 }
-.box .box-inner .desc ul.actions li span {
+.box .box-inner .desc ul.actions > li span {
   color: #999;
 }
-.box .box-inner .desc ul.actions li.stats {
+.box .box-inner .desc ul.actions > li.stats {
   color: #999;
   text-align: right;
 }
-.box .box-inner .desc ul.actions li.stats span {
+.box .box-inner .desc ul.actions > li.stats span {
   margin-right: 5px;
 }
-.box .box-inner .desc ul.actions li.stats span:last-child {
+.box .box-inner .desc ul.actions > li.stats span:last-child {
   margin-right: 0;
 }
-.box .box-inner .desc ul.actions li.share {
+.box .box-inner .desc ul.actions > li.share {
   text-align: center;
 }
-.box .box-inner .desc ul.actions li:first-child {
+.box .box-inner .desc ul.actions > li:first-child {
   border-left: none;
 }
 .box .box-inner .desc ul.actions a.active,
