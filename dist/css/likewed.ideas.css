@@ -1190,6 +1190,41 @@ div.tagsinput div {
     text-overflow: ellipsis;
   }
 }
+#board-actions .actions {
+  margin-bottom: 0;
+  margin-left: 0;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+}
+#board-actions .actions > li {
+  text-align: center;
+  border-right: 1px dashed #eee;
+}
+#board-actions .actions > li a {
+  display: block;
+  width: 100%;
+  padding: 1.5em 0;
+  color: #5f5f5f;
+  text-align: center;
+  text-decoration: none;
+}
+#board-actions .actions > li a i {
+  display: block;
+  margin: 0 auto .5em;
+  font-size: 2em;
+}
+#board-actions .actions > li:hover {
+  border-color: transparent;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, .1);
+          box-shadow: inset 0 0 5px rgba(0, 0, 0, .1);
+}
+#board-actions .weibo-share {
+  padding: 1.5em 1.5em;
+  margin-bottom: 0;
+  margin-bottom: 1.5em;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+}
 /* ht content cates navigator */
 #idea-cates {
   margin-bottom: 20px;
