@@ -1104,7 +1104,7 @@ div.tagsinput div {
   white-space: nowrap;
 }
 .board-banner .caption .description {
-  max-height: 36px;
+  max-height: 60px;
   overflow-y: hidden;
   font-size: 14px;
   text-overflow: ellipsis;
