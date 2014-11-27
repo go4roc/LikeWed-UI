@@ -1200,7 +1200,7 @@ div.tagsinput div {
   text-align: center;
   border-right: 1px dashed #eee;
 }
-#board-actions .actions > li a {
+#board-actions .actions > li a.action {
   display: block;
   width: 100%;
   padding: 1.5em 0;
@@ -1208,7 +1208,7 @@ div.tagsinput div {
   text-align: center;
   text-decoration: none;
 }
-#board-actions .actions > li a i {
+#board-actions .actions > li a.action i {
   display: block;
   margin: 0 auto .5em;
   font-size: 2em;
