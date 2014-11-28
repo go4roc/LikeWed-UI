@@ -1386,8 +1386,7 @@ a.editable-click.editable-disabled:hover {
 #pin-modal .modal-body > form h5 {
   padding: 7px;
   margin: 0;
-  color: white;
-  background: #048ac2;
+  color: black;
   border-radius: 3px 3px 0 0;
 }
 #pin-modal .modal-body > form ul {
@@ -1416,11 +1415,16 @@ a.editable-click.editable-disabled:hover {
   cursor: pointer;
 }
 #pin-modal .modal-body > form ul li label.selected {
-  background: #f1f1f1;
+  color: white;
+  background: #e9573e;
 }
 #pin-modal .modal-body > form ul li label:hover {
   background: #dcddde;
   border-radius: 3px;
+}
+#pin-modal .modal-body > form ul li label.selected:hover {
+  color: white;
+  background: #db3519;
 }
 #pin-modal .modal-body > form ul li .fa-check {
   position: absolute;
