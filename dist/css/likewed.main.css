@@ -1,0 +1,13 @@
+/** reset **/
+body {
+  font-family: "helvetica neue", arial, sans-serif;
+  font-size: 14px;
+  color: #444;
+}
+/** main content **/
+.main {
+  min-height: 500px;
+  padding: 20px 0;
+  background: #ebeced;
+}
+/*# sourceMappingURL=likewed.main.css.map */

@@ -235,6 +235,12 @@ module.exports = function (grunt) {
                 cwd: 'dist/',
                 src: '**',
                 dest: '../LikeWed-Main/public/core/'
+            },
+            cityDist: {
+                expand: true,
+                cwd: 'dist/',
+                src: '**',
+                dest: '../LikeWed-City/public/core/'
             }
         },
 
@@ -278,7 +284,7 @@ module.exports = function (grunt) {
     grunt.registerTask('dist', ['clean:build', 'clean:dist', 'dist-css', 'copy:fonts', 'dist-js']);
 
     // Full distribution for main task
-    grunt.registerTask('dist:main', ['clean:build', 'clean:dist', 'dist-css', 'copy:fonts', 'dist-js', 'clean:mainDist', 'copy:mainDist']); 
+    grunt.registerTask('dist:main', ['clean:build', 'clean:dist', 'dist-css', 'copy:fonts', 'dist-js', 'clean:mainDist', 'copy:mainDist', 'copy:cityDist']); 
 
     // Full distribution for idea task
     grunt.registerTask('dist:ideas', ['clean:build', 'clean:dist', 'dist-css', 'copy:fonts', 'dist-js', 'clean:ideasDist', 'copy:ideasDist']); 
