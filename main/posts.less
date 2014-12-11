@@ -1,0 +1,49 @@
+//
+// LikeWed Posts 
+// --------------------------------------------------
+
+#post-actions {
+	.actions {
+		margin-bottom: 0;
+		margin-left: 0;
+		background: #fafafa;
+		border-top: 1px solid #D9D9D9;
+
+		>li {
+			text-align: center;
+			border-right: 1px dashed #D9D9D9;
+
+			a.action {
+				display: block;
+				width: 100%;
+				padding: 1.5em 0;
+				color: #5f5f5f;
+				text-align: center;
+				text-decoration: none;
+
+				i {
+					display: block;
+					margin: 0 auto .5em;
+					font-size: 2em;
+				}
+
+				&.action.active i {
+					color: #e9573e;
+				}
+			}
+			&:hover {
+				border-color: transparent;
+				-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+				box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+			}
+		}
+	}
+
+	.weibo-share {
+		padding: 1.5em 1.5em;
+		margin-bottom: 0;
+		background: #fafafa;
+		border-top: 1px solid #D9D9D9;
+		margin-bottom: 1.5em;
+	}
+}

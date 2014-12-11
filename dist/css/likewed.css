@@ -6504,12 +6504,12 @@ a.list-group-item-danger.active:focus {
 }
 .banner {
   margin-top: -20px;
-  margin-bottom: 20px;
-  background: #e9e8e6 url(http://res.htwed.com/v4.0.0/img/ideas-board-banner.jpg) top center no-repeat;
+  margin-bottom: 0;
+  background: none;
 }
 .banner .container {
   position: relative;
-  height: 180px;
+  height: auto;
   padding-left: 10px;
 }
 .banner .cover {
@@ -6524,15 +6524,14 @@ a.list-group-item-danger.active:focus {
   display: block;
 }
 .banner .caption {
-  position: absolute;
   bottom: 0;
   display: block;
-  padding: 20px 20px;
+  padding: 10px 10px;
   margin-left: 0;
   color: #666;
 }
 .banner .caption h1 {
-  font-size: 32px;
+  font-size: 21px;
   font-weight: normal;
   line-height: 1.22em;
 }
@@ -6543,6 +6542,11 @@ a.list-group-item-danger.active:focus {
   text-overflow: ellipsis;
 }
 @media (min-width: 768px) {
+  .banner {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    background: #e9e8e6 url(http://res.htwed.com/v4.0.0/img/ideas-board-banner.jpg) top center no-repeat;
+  }
   .banner .container {
     height: 230px;
     padding-left: 30px;
@@ -6687,6 +6691,45 @@ a.list-group-item-danger.active:focus {
 .box .box-inner .desc ul.actions a.active,
 .box .box-inner .desc ul.actions a:hover {
   color: #e9573e;
+}
+.box.post-info .section {
+  width: 100%;
+  padding: 10px 10px;
+  border-top: 1px solid #d8d8d8;
+}
+.box.post-info .section .section-title {
+  display: block;
+  height: 34px;
+  padding-top: 8px;
+  overflow: hidden;
+  font-size: 13px;
+  font-weight: 400;
+  color: #444!important;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.box.post-info .section:first-child {
+  border-top: none;
+}
+.box.post-info .owner .avatar {
+  display: table-cell;
+  width: 60px;
+  height: 60px;
+  vertical-align: top;
+}
+.box.post-info .owner .avatar img {
+  width: 60px;
+  height: 60px;
+}
+.box.post-info .owner .username {
+  display: table-cell;
+  padding-left: 10px;
+  vertical-align: top;
+}
+.box.post-info .owner .username h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .embed-responsive {
   position: relative;

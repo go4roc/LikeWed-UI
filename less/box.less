@@ -136,7 +136,58 @@
             }
         }
     }
+
+    &.post-info {
+        .section {
+            padding: 10px 10px;
+            width: 100%;
+            border-top: 1px solid #d8d8d8;
+
+            .section-title {
+                display: block;
+                height: 34px;
+                padding-top: 8px;
+                overflow: hidden;
+                font-size: 13px;
+                font-weight: 400;
+                color: #444!important;
+                text-align: left;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+        
+        .section:first-child {
+            border-top: none;
+        }
+
+        .owner {
+            .avatar {
+                display: table-cell;
+                width: 60px;
+                height: 60px;
+                vertical-align: top;
+
+                img {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+
+            .username {
+                display: table-cell;
+                padding-left: 10px;
+                vertical-align: top;
+
+                h4 {
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
 }
+
 
 // .pic {
 //     position: relative;

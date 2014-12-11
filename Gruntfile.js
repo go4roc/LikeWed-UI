@@ -54,9 +54,6 @@ module.exports = function (grunt) {
             },
             core: {
                 src: 'js/*.js'
-            },
-            ideas: {
-                src: 'ideas/js/*.js'
             }
         },
 
@@ -69,9 +66,6 @@ module.exports = function (grunt) {
             },
             core: {
                 src: '<%= jshint.core.src %>'
-            },
-            ideas: {
-                src: '<%= jshint.ideas.src %>'
             }
         },
 
@@ -99,7 +93,8 @@ module.exports = function (grunt) {
             },
             core: {
                 src: [
-                    '<%= concat.bootstrap.dest %>'
+                    '<%= concat.bootstrap.dest %>',
+                    'js/*.js'
                 ],
                 dest: 'dist/js/<%= pkg.name %>.js'
             }
