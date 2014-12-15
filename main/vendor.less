@@ -3,6 +3,10 @@
 // --------------------------------------------------
 
 // vendor-banner
+.vendor-banner-container {
+	padding: 0 10px;
+}
+
 .vendor-banner {
 	background: #fff;
 	color: #040404;
@@ -91,7 +95,7 @@
 		padding-top: 75px;
 		padding-bottom: 66px;
 		width: 100%;
-
+			
 		.vendor-info {
 			height: 100%;
 			margin: 0 auto;
@@ -180,6 +184,56 @@
 					}
 				}
 			}
+
+			.info {
+				display: block;
+				font-size: 12px;
+				height: auto;
+				margin: 0;
+				text-align: center;
+				color: #737373;
+
+				.title {
+					display: block;
+					white-space: nowrap;
+					margin-bottom: 15px;
+					h1 {
+						cursor: pointer;
+						display: inline;
+						font-size: 28px;
+						font-weight: normal;
+						margin: 0;
+						max-width: 370px;
+						overflow: hidden;
+						text-align: left;
+						text-overflow: ellipsis;
+						white-space: normal;
+					}
+				}
+
+				.roles{
+					overflow: hidden;
+					text-overflow: ellipsis;
+					margin-bottom: 15px;
+				}
+
+				.description p {	
+					display: block;
+					margin: 0 auto;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					max-width: 370px;
+				}
+			}
+
+			.social {
+				display: block;
+				font-size: 12px;
+				height: auto;
+				margin: 0;
+				text-align: center;
+				color: #737373;
+			}
 		}
 	}
 }
@@ -199,56 +253,28 @@
 			bottom: 0;
 
 			.cover-inner {
+				height: 100%;
+				margin: 0 auto;
+				width: 0;
+
 				.cover-img {
-					bottom: 0;
-					color: #fff;
-					font-size: 20px;
-					font-weight: bold;
-					line-height: 0;
-					overflow: hidden;
-					position: relative;
-					right: 0;
-					top: 0;
-					vertical-align: top;
+					height: 100%;
+					left: -1519px;
+					right: -1520px;
+					position: absolute;
 
 					img {
-						display: block;
-						height: auto;
-						width: 100%;
+						height: 101%;
+						width: auto;
+						margin: 0 auto;
 					}
 				}
 			}
 
 			.cover-edit {
-				bottom: auto;
-				right: 30px;
-				top: 30px;
-				display: none;
-				position: absolute;
-				vertical-align: top;
-				color: #fff;
-
-				.cover-edit-btn {
-					display: inline-block;
-					line-height: 28px;
-					min-width: 54px;
-					text-align: center;
-					font-weight: bold;
-					white-space: nowrap;
-					border: 1px solid #d9d9d9;
-					border: 1px solid rgba(0, 0, 0, 0.15);
-					border-radius: 3px;
-					box-shadow: none;
-					background-color: rgba(0,0,0,.7);
-					background-image: none;
-					color: #fff;
-					cursor: pointer;
-					font-size: 14px;
-					margin-right: 0;
-					outline: none;
-					padding: 3px 8px;
-					position: static;
-				}
+				bottom: 9%;
+				right: 5%;
+				top: auto;
 			}
 
 			&:hover {
@@ -265,91 +291,92 @@
 			display: table;
 			background-color: #040404;
 			margin: 0;
-			padding: 15px 15px 30px 66px;
-			width: 266px;
+			padding: 15px 15px 66px;
+			width: 276px;
+			
+			.card-bg {
+				background-position: center;
+				bottom: 0;
+				left: 0;
+				overflow: hidden;
+				position: absolute;
+				right: 0;
+				top: 0;
+				
+				.bg-box {
+					height: 100%;
+					left: 50%;
+					margin: 0 auto;
+					position: absolute;
+					right: 50%;
 
-			.vendor-info {
-				display: table-cell;
-				width: 236px;
+					.bg-img  {
+						height: 100%;
+						left: -1000px;
+						margin: 0 auto;
+						position: absolute;
+						right: -1000px;
 
-				.vendor-avatar {
-					width: 120px;
+						> img {
+							height: 101%;
+							width: auto;
+						}
+					}
+				}
+
+				.bg-opacity {
+					filter: alpha(opacity=20);
+					opacity: .2;
+					background: black;
+					bottom: 0;
 					left: 0;
 					position: absolute;
 					right: 0;
-					top: -135px;
+					top: 0;
+				}
+
+			}
+
+			.vendor-info {
+				display: table-cell;
+				vertical-align: middle;
+				width: 246px;
+				height: 100%;
+				margin: 0 auto;
+				position: relative;
+
+				.vendor-avatar {
+					position: relative;
+					top: 0;
 					margin: 0 auto 15px;
 
-					.avator-outer {
-						display: table;
-						margin: 0;
-						position: relative;
-						.avator-align {
-							text-decoration: center;
-
-							.avator-inner {
-								-webkit-border-radius: 50%;
-								border-radius: 50%;
-								display: table;
-								margin-top: 0 auto;
-								border: 4px solid #fff;
-								> img {
-									height: 120px;
-									width: 120px;
-									border-radius: 50%;
-									display: block;
-								}
-
-							}
-						}
+					
+					.vendor-flag .flag-box .flag-icon {
+						background: no-repeat url(/img/vflags.png) -55px -21px;
 					}
-					.vendor-flag {
+				}
+
+				.info {
+					color: #fff;
+
+
+					.title h1 {
+						font-size: 20px;
+						max-width: 246px;
+					}
+
+					.roles{
+						overflow: hidden;
+						text-overflow: ellipsis;
+						margin-bottom: 15px;
+					}
+
+					.description p {	
 						display: block;
-						height: 0;
-						margin: 0;
-
-						.flag-box {
-							left: 102px;
-							top: 109px;
-							position: absolute;
-							height: 15px;
-							margin-left: 6px;
-							width: 15px;
-							display: inline-block;
-
-							.flag-icon {
-								filter: alpha(opacity=50);
-								opacity: .5;
-								background: no-repeat url(/img/vflag.png) 0 0;
-								height: 18px;
-								margin-top: -1px;
-								width: 18px;
-								position: absolute;
-								z-index: 8;
-								display: inline-block;
-							}
-
-							.flag-text {
-								display: -moz-inline-box;
-								display: inline-block;
-								background-color: #e6e6e6;
-								color: #36c;
-								font-size: 12px;
-								overflow: hidden;
-								visibility: hidden;
-								width: 0;
-								height: 15px;
-								line-height: 15px;
-								margin-left: -7px;
-								position: absolute;
-								white-space: nowrap;
-								z-index: 7;
-							}
-
-							&:hover  .flag-text{
-								visibility: true;
-							}
-						}
+						margin: 0 auto;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						max-width: 370px;
 					}
 				}
 			}
@@ -360,19 +387,15 @@
 @media (min-width: 992px) {
 	.vendor-banner {
 		min-height: 380px;
-	}
-	
-	.vendor-banner .left  {
-		height: 380px;
-		min-height: 380px;
-	}
 
-	.vendor-banner .right {
-		width: 594px;
-	}
+		.vendor-cover {
+			width: 594px;
+		}	
 
-	.vendor-banner .vendor-card {
-		width: 346px;
+		.vendor-card {
+			height: 380px;
+			width: 346px;
+		}
 	}
 }
 
@@ -394,187 +417,19 @@
 	.vendor-banner .vendor-card {
 		width: 420px;
 	}
-}
 
-.card-bg {
-	display: none;
-}
+	.vendor-banner {
+		min-height: 420px;
 
-.card-bg {
-	background-position: center;
-	bottom: 0;
-	left: 0;
-	overflow: hidden;
-	position: absolute;
-	right: 0;
-	top: 0;
-}
+		.vendor-cover {
+			width: 760px;
+		}	
 
-.card-bg .bg-box {
-	height: 100%;
-	left: 50%;
-	margin: 0 auto;
-	position: absolute;
-	right: 50%;
-}
-
-.bg-img  {
-	height: 100%;
-	left: -1000px;
-	margin: 0 auto;
-	position: absolute;
-	right: -1000px;
-}
-
-.bg-img > img {
-	height: 101%;
-	width: auto;
-}
-
-.card-bg .bg-opacity {
-	filter: alpha(opacity=20);
-	opacity: .2;
-	background: black;
-	bottom: 0;
-	left: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
-}
-
-
-.vendor-info .vendor-avatar {
-	width: 120px;
-	left: 0;
-	position: absolute;
-	right: 0;
-	top: -135px;
-	margin: 0 auto 15px;
-}
-
-.vendor-avatar .avator-outer {
-	display: table;
-	margin: 0;
-	position: relative;
-}
-
-.vendor-avatar .avator-outer .avator-align {
-	text-decoration: center;
-}
-
-.vendor-avatar .avator-outer .avator-align .avator-inner {
-	-webkit-border-radius: 50%;
-	border-radius: 50%;
-	display: table;
-	margin-top: 0 auto;
-	border: 4px solid #fff;
-}
-
-.vendor-avatar .avator-outer .avator-align .avator-inner  > img {
-	height: 120px;
-	width: 120px;
-	border-radius: 50%;
-	display: block;
-}
-
-.vendor-avatar  .vendor-flag {
-	display: block;
-	height: 0;
-	margin: 0;
-}
-
-.vendor-avatar  .vendor-flag  .flag-box {
-	left: 102px;
-	top: 109px;
-	position: absolute;
-	height: 15px;
-	margin-left: 6px;
-	width: 15px;
-	display: inline-block;
-}
-
-.vendor-avatar  .vendor-flag  .flag-box .flag-icon {
-	filter: alpha(opacity=50);
-	opacity: .5;
-	background: no-repeat url(/img/vflag.png) 0 0;
-	height: 18px;
-	margin-top: -1px;
-	width: 18px;
-	position: absolute;
-	z-index: 8;
-	display: inline-block;
-}
-
-.vendor-avatar  .vendor-flag  .flag-box .flag-text {
-	display: -moz-inline-box;
-	display: inline-block;
-	background-color: #e6e6e6;
-	color: #36c;
-	font-size: 12px;
-	overflow: hidden;
-	visibility: hidden;
-	width: 0;
-	height: 15px;
-	line-height: 15px;
-	margin-left: -7px;
-	position: absolute;
-	white-space: nowrap;
-	z-index: 7;
-}
-
-.vendor-avatar  .vendor-flag  .flag-box .flag-box:hover .flag-text {
-	visibility: true;
-}
-
-.vendor-info .info {
-	display: block;
-	font-size: 12px;
-	height: auto;
-	margin: 0;
-	text-align: center;
-	color: #737373;
-}
-
-.vendor-info .info .title {
-	display: block;
-	white-space: nowrap;
-	margin-bottom: 15px;
-} 
-
-.vendor-info .info .title h1 {
-	cursor: pointer;
-	display: inline;
-	font-size: 28px;
-	font-weight: normal;
-	margin: 0;
-	max-width: 370px;
-	overflow: hidden;
-	text-align: left;
-	text-overflow: ellipsis;
-	white-space: normal;
-}
-
-.vendor-info .info .description, .vendor-info .info .roles{
-	overflow: hidden;
-	text-overflow: ellipsis;
-	margin-bottom: 15px;
-}
-
-.vendor-info .info .description p {	
-	display: block;
-	margin: 0 auto;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	max-width: 370px;
-}
-
-.vendor-info .social {
-	display: block;
-	font-size: 12px;
-	height: auto;
-	margin: 0;
-	text-align: center;
-	color: #737373;
+		.vendor-card {
+			height: 380px;
+			width: 420x;
+		}
+	}
 }
 
 .vendor-actions {

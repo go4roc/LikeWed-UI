@@ -48,6 +48,9 @@ body {
   background: #fafafa;
   border-top: 1px solid #d9d9d9;
 }
+.vendor-banner-container {
+  padding: 0 10px;
+}
 .vendor-banner {
   position: relative;
   z-index: 1;
@@ -211,6 +214,51 @@ body {
 .vendor-banner .vendor-card .vendor-info .vendor-avatar .vendor-flag .flag-box:hover .flag-text {
   visibility: true;
 }
+.vendor-banner .vendor-card .vendor-info .info {
+  display: block;
+  height: auto;
+  margin: 0;
+  font-size: 12px;
+  color: #737373;
+  text-align: center;
+}
+.vendor-banner .vendor-card .vendor-info .info .title {
+  display: block;
+  margin-bottom: 15px;
+  white-space: nowrap;
+}
+.vendor-banner .vendor-card .vendor-info .info .title h1 {
+  display: inline;
+  max-width: 370px;
+  margin: 0;
+  overflow: hidden;
+  font-size: 28px;
+  font-weight: normal;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: normal;
+  cursor: pointer;
+}
+.vendor-banner .vendor-card .vendor-info .info .roles {
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.vendor-banner .vendor-card .vendor-info .info .description p {
+  display: block;
+  max-width: 370px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.vendor-banner .vendor-card .vendor-info .social {
+  display: block;
+  height: auto;
+  margin: 0;
+  font-size: 12px;
+  color: #737373;
+  text-align: center;
+}
 @media (min-width: 768px) {
   .vendor-banner {
     min-height: 320px;
@@ -225,52 +273,26 @@ body {
     width: 454px;
     overflow: hidden;
   }
+  .vendor-banner .vendor-cover .cover-inner {
+    width: 0;
+    height: 100%;
+    margin: 0 auto;
+  }
   .vendor-banner .vendor-cover .cover-inner .cover-img {
-    position: relative;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 0;
-    color: #fff;
-    vertical-align: top;
+    position: absolute;
+    right: -1520px;
+    left: -1519px;
+    height: 100%;
   }
   .vendor-banner .vendor-cover .cover-inner .cover-img img {
-    display: block;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 101%;
+    margin: 0 auto;
   }
   .vendor-banner .vendor-cover .cover-edit {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    bottom: auto;
-    display: none;
-    color: #fff;
-    vertical-align: top;
-  }
-  .vendor-banner .vendor-cover .cover-edit .cover-edit-btn {
-    position: static;
-    display: inline-block;
-    min-width: 54px;
-    padding: 3px 8px;
-    margin-right: 0;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 28px;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, .7);
-    background-image: none;
-    border: 1px solid #d9d9d9;
-    border: 1px solid rgba(0, 0, 0, .15);
-    border-radius: 3px;
-    outline: none;
-    box-shadow: none;
+    top: auto;
+    right: 5%;
+    bottom: 9%;
   }
   .vendor-banner .vendor-cover:hover .cover-edit {
     z-index: 1;
@@ -278,105 +300,96 @@ body {
   }
   .vendor-banner .vendor-card {
     display: table;
-    width: 266px;
+    width: 276px;
     height: 320px;
     min-height: 320px;
-    padding: 15px 15px 30px 66px;
+    padding: 15px 15px 66px;
     margin: 0;
     background-color: #040404;
   }
+  .vendor-banner .vendor-card .card-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    background-position: center;
+  }
+  .vendor-banner .vendor-card .card-bg .bg-box {
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .vendor-banner .vendor-card .card-bg .bg-box .bg-img {
+    position: absolute;
+    right: -1000px;
+    left: -1000px;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .vendor-banner .vendor-card .card-bg .bg-box .bg-img > img {
+    width: auto;
+    height: 101%;
+  }
+  .vendor-banner .vendor-card .card-bg .bg-opacity {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: black;
+    filter: alpha(opacity=20);
+    opacity: .2;
+  }
   .vendor-banner .vendor-card .vendor-info {
+    position: relative;
     display: table-cell;
-    width: 236px;
+    width: 246px;
+    height: 100%;
+    margin: 0 auto;
+    vertical-align: middle;
   }
   .vendor-banner .vendor-card .vendor-info .vendor-avatar {
-    position: absolute;
-    top: -135px;
-    right: 0;
-    left: 0;
-    width: 120px;
+    position: relative;
+    top: 0;
     margin: 0 auto 15px;
   }
-  .vendor-banner .vendor-card .vendor-info .vendor-avatar .avator-outer {
-    position: relative;
-    display: table;
-    margin: 0;
-  }
-  .vendor-banner .vendor-card .vendor-info .vendor-avatar .avator-outer .avator-align {
-    text-decoration: center;
-  }
-  .vendor-banner .vendor-card .vendor-info .vendor-avatar .avator-outer .avator-align .avator-inner {
-    display: table;
-    margin-top: 0 auto;
-    border: 4px solid #fff;
-            border-radius: 50%;
-
-    -webkit-border-radius: 50%;
-  }
-  .vendor-banner .vendor-card .vendor-info .vendor-avatar .avator-outer .avator-align .avator-inner > img {
-    display: block;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-  }
-  .vendor-banner .vendor-card .vendor-info .vendor-avatar .vendor-flag {
-    display: block;
-    height: 0;
-    margin: 0;
-  }
-  .vendor-banner .vendor-card .vendor-info .vendor-avatar .vendor-flag .flag-box {
-    position: absolute;
-    top: 109px;
-    left: 102px;
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin-left: 6px;
-  }
   .vendor-banner .vendor-card .vendor-info .vendor-avatar .vendor-flag .flag-box .flag-icon {
-    position: absolute;
-    z-index: 8;
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    margin-top: -1px;
-    background: no-repeat url(/img/vflag.png) 0 0;
-    filter: alpha(opacity=50);
-    opacity: .5;
+    background: no-repeat url(/img/vflags.png) -55px -21px;
   }
-  .vendor-banner .vendor-card .vendor-info .vendor-avatar .vendor-flag .flag-box .flag-text {
-    position: absolute;
-    z-index: 7;
-    display: -moz-inline-box;
-    display: inline-block;
-    width: 0;
-    height: 15px;
-    margin-left: -7px;
+  .vendor-banner .vendor-card .vendor-info .info {
+    color: #fff;
+  }
+  .vendor-banner .vendor-card .vendor-info .info .title h1 {
+    max-width: 246px;
+    font-size: 20px;
+  }
+  .vendor-banner .vendor-card .vendor-info .info .roles {
+    margin-bottom: 15px;
     overflow: hidden;
-    font-size: 12px;
-    line-height: 15px;
-    color: #36c;
-    white-space: nowrap;
-    visibility: hidden;
-    background-color: #e6e6e6;
+    text-overflow: ellipsis;
   }
-  .vendor-banner .vendor-card .vendor-info .vendor-avatar .vendor-flag .flag-box:hover .flag-text {
-    visibility: true;
+  .vendor-banner .vendor-card .vendor-info .info .description p {
+    display: block;
+    max-width: 370px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 @media (min-width: 992px) {
   .vendor-banner {
     min-height: 380px;
   }
-  .vendor-banner .left {
-    height: 380px;
-    min-height: 380px;
-  }
-  .vendor-banner .right {
+  .vendor-banner .vendor-cover {
     width: 594px;
   }
   .vendor-banner .vendor-card {
     width: 346px;
+    height: 380px;
   }
 }
 @media (min-width: 1200px) {
@@ -393,166 +406,16 @@ body {
   .vendor-banner .vendor-card {
     width: 420px;
   }
-}
-.card-bg {
-  display: none;
-}
-.card-bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  background-position: center;
-}
-.card-bg .bg-box {
-  position: absolute;
-  right: 50%;
-  left: 50%;
-  height: 100%;
-  margin: 0 auto;
-}
-.bg-img {
-  position: absolute;
-  right: -1000px;
-  left: -1000px;
-  height: 100%;
-  margin: 0 auto;
-}
-.bg-img > img {
-  width: auto;
-  height: 101%;
-}
-.card-bg .bg-opacity {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: black;
-  filter: alpha(opacity=20);
-  opacity: .2;
-}
-.vendor-info .vendor-avatar {
-  position: absolute;
-  top: -135px;
-  right: 0;
-  left: 0;
-  width: 120px;
-  margin: 0 auto 15px;
-}
-.vendor-avatar .avator-outer {
-  position: relative;
-  display: table;
-  margin: 0;
-}
-.vendor-avatar .avator-outer .avator-align {
-  text-decoration: center;
-}
-.vendor-avatar .avator-outer .avator-align .avator-inner {
-  display: table;
-  margin-top: 0 auto;
-  border: 4px solid #fff;
-          border-radius: 50%;
-
-  -webkit-border-radius: 50%;
-}
-.vendor-avatar .avator-outer .avator-align .avator-inner > img {
-  display: block;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-}
-.vendor-avatar .vendor-flag {
-  display: block;
-  height: 0;
-  margin: 0;
-}
-.vendor-avatar .vendor-flag .flag-box {
-  position: absolute;
-  top: 109px;
-  left: 102px;
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin-left: 6px;
-}
-.vendor-avatar .vendor-flag .flag-box .flag-icon {
-  position: absolute;
-  z-index: 8;
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  margin-top: -1px;
-  background: no-repeat url(/img/vflag.png) 0 0;
-  filter: alpha(opacity=50);
-  opacity: .5;
-}
-.vendor-avatar .vendor-flag .flag-box .flag-text {
-  position: absolute;
-  z-index: 7;
-  display: -moz-inline-box;
-  display: inline-block;
-  width: 0;
-  height: 15px;
-  margin-left: -7px;
-  overflow: hidden;
-  font-size: 12px;
-  line-height: 15px;
-  color: #36c;
-  white-space: nowrap;
-  visibility: hidden;
-  background-color: #e6e6e6;
-}
-.vendor-avatar .vendor-flag .flag-box .flag-box:hover .flag-text {
-  visibility: true;
-}
-.vendor-info .info {
-  display: block;
-  height: auto;
-  margin: 0;
-  font-size: 12px;
-  color: #737373;
-  text-align: center;
-}
-.vendor-info .info .title {
-  display: block;
-  margin-bottom: 15px;
-  white-space: nowrap;
-}
-.vendor-info .info .title h1 {
-  display: inline;
-  max-width: 370px;
-  margin: 0;
-  overflow: hidden;
-  font-size: 28px;
-  font-weight: normal;
-  text-align: left;
-  text-overflow: ellipsis;
-  white-space: normal;
-  cursor: pointer;
-}
-.vendor-info .info .description,
-.vendor-info .info .roles {
-  margin-bottom: 15px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.vendor-info .info .description p {
-  display: block;
-  max-width: 370px;
-  margin: 0 auto;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.vendor-info .social {
-  display: block;
-  height: auto;
-  margin: 0;
-  font-size: 12px;
-  color: #737373;
-  text-align: center;
+  .vendor-banner {
+    min-height: 420px;
+  }
+  .vendor-banner .vendor-cover {
+    width: 760px;
+  }
+  .vendor-banner .vendor-card {
+    width: 420x;
+    height: 380px;
+  }
 }
 .vendor-actions {
   position: absolute;
