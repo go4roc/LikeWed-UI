@@ -186,19 +186,174 @@
 
 @media (min-width: 768px) {
 	.vendor-banner {
+		background: #040404;
+		color: #fff;
 		min-height: 320px;
-	}
-	
-	.vendor-banner .left  {
-		height: 320px;
-		min-height: 320px;
-	}
-	.vendor-banner .right {
-		width: 454px;
-	}
 
-	.vendor-banner .vendor-card {
-		width: 266px;
+		.vendor-cover {
+			width: 454px;
+			overflow: hidden;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+
+			.cover-inner {
+				.cover-img {
+					bottom: 0;
+					color: #fff;
+					font-size: 20px;
+					font-weight: bold;
+					line-height: 0;
+					overflow: hidden;
+					position: relative;
+					right: 0;
+					top: 0;
+					vertical-align: top;
+
+					img {
+						display: block;
+						height: auto;
+						width: 100%;
+					}
+				}
+			}
+
+			.cover-edit {
+				bottom: auto;
+				right: 30px;
+				top: 30px;
+				display: none;
+				position: absolute;
+				vertical-align: top;
+				color: #fff;
+
+				.cover-edit-btn {
+					display: inline-block;
+					line-height: 28px;
+					min-width: 54px;
+					text-align: center;
+					font-weight: bold;
+					white-space: nowrap;
+					border: 1px solid #d9d9d9;
+					border: 1px solid rgba(0, 0, 0, 0.15);
+					border-radius: 3px;
+					box-shadow: none;
+					background-color: rgba(0,0,0,.7);
+					background-image: none;
+					color: #fff;
+					cursor: pointer;
+					font-size: 14px;
+					margin-right: 0;
+					outline: none;
+					padding: 3px 8px;
+					position: static;
+				}
+			}
+
+			&:hover {
+				.cover-edit {
+					display: block;
+					z-index: 1;
+				}
+			}
+		}	
+
+		.vendor-card {
+			height: 320px;
+			min-height: 320px;
+			display: table;
+			background-color: #040404;
+			margin: 0;
+			padding: 15px 15px 30px 66px;
+			width: 266px;
+
+			.vendor-info {
+				display: table-cell;
+				width: 236px;
+
+				.vendor-avatar {
+					width: 120px;
+					left: 0;
+					position: absolute;
+					right: 0;
+					top: -135px;
+					margin: 0 auto 15px;
+
+					.avator-outer {
+						display: table;
+						margin: 0;
+						position: relative;
+						.avator-align {
+							text-decoration: center;
+
+							.avator-inner {
+								-webkit-border-radius: 50%;
+								border-radius: 50%;
+								display: table;
+								margin-top: 0 auto;
+								border: 4px solid #fff;
+								> img {
+									height: 120px;
+									width: 120px;
+									border-radius: 50%;
+									display: block;
+								}
+
+							}
+						}
+					}
+					.vendor-flag {
+						display: block;
+						height: 0;
+						margin: 0;
+
+						.flag-box {
+							left: 102px;
+							top: 109px;
+							position: absolute;
+							height: 15px;
+							margin-left: 6px;
+							width: 15px;
+							display: inline-block;
+
+							.flag-icon {
+								filter: alpha(opacity=50);
+								opacity: .5;
+								background: no-repeat url(/img/vflag.png) 0 0;
+								height: 18px;
+								margin-top: -1px;
+								width: 18px;
+								position: absolute;
+								z-index: 8;
+								display: inline-block;
+							}
+
+							.flag-text {
+								display: -moz-inline-box;
+								display: inline-block;
+								background-color: #e6e6e6;
+								color: #36c;
+								font-size: 12px;
+								overflow: hidden;
+								visibility: hidden;
+								width: 0;
+								height: 15px;
+								line-height: 15px;
+								margin-left: -7px;
+								position: absolute;
+								white-space: nowrap;
+								z-index: 7;
+							}
+
+							&:hover  .flag-text{
+								visibility: true;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 

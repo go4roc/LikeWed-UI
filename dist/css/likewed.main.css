@@ -214,16 +214,154 @@ body {
 @media (min-width: 768px) {
   .vendor-banner {
     min-height: 320px;
+    color: #fff;
+    background: #040404;
   }
-  .vendor-banner .left {
-    height: 320px;
-    min-height: 320px;
-  }
-  .vendor-banner .right {
+  .vendor-banner .vendor-cover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
     width: 454px;
+    overflow: hidden;
+  }
+  .vendor-banner .vendor-cover .cover-inner .cover-img {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 0;
+    color: #fff;
+    vertical-align: top;
+  }
+  .vendor-banner .vendor-cover .cover-inner .cover-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .vendor-banner .vendor-cover .cover-edit {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: auto;
+    display: none;
+    color: #fff;
+    vertical-align: top;
+  }
+  .vendor-banner .vendor-cover .cover-edit .cover-edit-btn {
+    position: static;
+    display: inline-block;
+    min-width: 54px;
+    padding: 3px 8px;
+    margin-right: 0;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 28px;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .7);
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 3px;
+    outline: none;
+    box-shadow: none;
+  }
+  .vendor-banner .vendor-cover:hover .cover-edit {
+    z-index: 1;
+    display: block;
   }
   .vendor-banner .vendor-card {
+    display: table;
     width: 266px;
+    height: 320px;
+    min-height: 320px;
+    padding: 15px 15px 30px 66px;
+    margin: 0;
+    background-color: #040404;
+  }
+  .vendor-banner .vendor-card .vendor-info {
+    display: table-cell;
+    width: 236px;
+  }
+  .vendor-banner .vendor-card .vendor-info .vendor-avatar {
+    position: absolute;
+    top: -135px;
+    right: 0;
+    left: 0;
+    width: 120px;
+    margin: 0 auto 15px;
+  }
+  .vendor-banner .vendor-card .vendor-info .vendor-avatar .avator-outer {
+    position: relative;
+    display: table;
+    margin: 0;
+  }
+  .vendor-banner .vendor-card .vendor-info .vendor-avatar .avator-outer .avator-align {
+    text-decoration: center;
+  }
+  .vendor-banner .vendor-card .vendor-info .vendor-avatar .avator-outer .avator-align .avator-inner {
+    display: table;
+    margin-top: 0 auto;
+    border: 4px solid #fff;
+            border-radius: 50%;
+
+    -webkit-border-radius: 50%;
+  }
+  .vendor-banner .vendor-card .vendor-info .vendor-avatar .avator-outer .avator-align .avator-inner > img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+  .vendor-banner .vendor-card .vendor-info .vendor-avatar .vendor-flag {
+    display: block;
+    height: 0;
+    margin: 0;
+  }
+  .vendor-banner .vendor-card .vendor-info .vendor-avatar .vendor-flag .flag-box {
+    position: absolute;
+    top: 109px;
+    left: 102px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 6px;
+  }
+  .vendor-banner .vendor-card .vendor-info .vendor-avatar .vendor-flag .flag-box .flag-icon {
+    position: absolute;
+    z-index: 8;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-top: -1px;
+    background: no-repeat url(/img/vflag.png) 0 0;
+    filter: alpha(opacity=50);
+    opacity: .5;
+  }
+  .vendor-banner .vendor-card .vendor-info .vendor-avatar .vendor-flag .flag-box .flag-text {
+    position: absolute;
+    z-index: 7;
+    display: -moz-inline-box;
+    display: inline-block;
+    width: 0;
+    height: 15px;
+    margin-left: -7px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 15px;
+    color: #36c;
+    white-space: nowrap;
+    visibility: hidden;
+    background-color: #e6e6e6;
+  }
+  .vendor-banner .vendor-card .vendor-info .vendor-avatar .vendor-flag .flag-box:hover .flag-text {
+    visibility: true;
   }
 }
 @media (min-width: 992px) {
