@@ -1,6 +1,6 @@
 /*!
  * LikeWed UI v0.0.1 (http://www.likewed.com)
- * Copyright 2014-2014 Rock Peng
+ * Copyright 2014-2015 Rock Peng
  */
 
 if (typeof jQuery === 'undefined') {
@@ -16,7 +16,7 @@ if (typeof jQuery === 'undefined') {
 
 /*!
  * LikeWed UI v0.0.1 (http://www.likewed.com)
- * Copyright 2014-2014 Rock Peng
+ * Copyright 2014-2015 Rock Peng
  */
 
 if (typeof jQuery === 'undefined') {
@@ -2390,74 +2390,77 @@ ht.initial = function() {
     }
 
     var $pinModal = $("#pin-modal");
-    $pinModal.on('shown.bs.modal', function(event){
-        $(this).on('click.pin.boardlists', '.board-list label', function(event){
-            event.preventDefault(); 
-            event.stopPropagation();
+    $(this).on('click.pin.boardlists', '.board-list label', function(event){
+        event.preventDefault(); 
+        event.stopPropagation();
 
-            _clearSelectBoardList();
-            $(this).addClass('selected').append('<i class="fa fa-check"></i>');
+        _clearSelectBoardList();
+        $(this).addClass('selected').append('<i class="fa fa-check"></i>');
 
-            return false;
-        });
+        return false;
+    });
 
-        $(this).on('submit.pin.createboard', 'form.board-list-form', function(event){
-            event.preventDefault(); 
-            event.stopPropagation();
+    $(this).on('submit.pin.createboard', 'form.board-list-form', function(event){
+        event.preventDefault(); 
+        event.stopPropagation();
 
-            $form = $('form.board-list-form', $pinModal);
-            $.ajax({
-                type: "POST",
-                url: $form.attr('action'),
-                data: $form.serialize(), // serializes the form's elements.
-                success: function(data) {
-                    if (data.error) {
-                        alert('创建失败--'+data.message);
-                    } else {
-                        _clearSelectBoardList();
-                        var $item = $('<li class="board-list"><label data-id="'+data.board_id+'" class="selected"> <span class="board-list-name">'+data.name+'</span> <input type="checkbox" checked> <i class="fa fa-check"></i></label></li>');
-                        $('.board-lists', $pinModal).prepend($item);
-                        $('#board-name').val("");
-                        $("button", $form).addClass('disabled');
-                    }               
-                }
-            });
-
-            return false;
-        });
-
-        $(this).on('click.pin.pin2board', 'button.pin2board', function(event){
-            event.preventDefault(); 
-            event.stopPropagation();
-
-            $item = $('.board-lists label.selected', $pinModal);
-
-            if ($item.length <= 0) {
-                alert('请选择一个或新建一个婚礼灵感板！');
-                return false;
+        $form = $('form.board-list-form', $pinModal);
+        $.ajax({
+            type: "POST",
+            url: $form.attr('action'),
+            data: $form.serialize(), // serializes the form's elements.
+            success: function(data) {
+                if (data.error) {
+                    alert('创建失败--'+data.message);
+                } else {
+                    _clearSelectBoardList();
+                    var $item = $('<li class="board-list"><label data-id="'+data.board_id+'" class="selected"> <span class="board-list-name">'+data.name+'</span> <input type="checkbox" checked> <i class="fa fa-check"></i></label></li>');
+                    $('.board-lists', $pinModal).prepend($item);
+                    $('#board-name').val("");
+                    $("button", $form).addClass('disabled');
+                }               
             }
-
-            $.ajax({
-                type: "POST",
-                url: $(this).attr('data-href'),
-                data: {board_id: $item.attr('data-id')}, // serializes the form's elements.
-                success: function(data) {
-                }
-            });
         });
 
-        $(this).on('keyup.pin.boardname', "input[name='name']", function(event){
-            return event.currentTarget.value.trim() ? $("form.board-list-form button", $pinModal).removeClass("disabled") : $("form.board-list-form button", $pinModal).addClass("disabled");
+        return false;
+    });
+
+    $(this).on('click.pin.pin2board', 'button.pin2board', function(event){
+        event.preventDefault(); 
+        event.stopPropagation();
+
+        $item = $('.board-lists label.selected', $pinModal);
+
+        if ($item.length <= 0) {
+            alert('请选择一个或新建一个婚礼灵感板！');
+            return false;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: $(this).attr('data-href'),
+            data: {board_id: $item.attr('data-id')}, // serializes the form's elements.
+            success: function(data) {
+            }
         });
     });
 
-    $pinModal.on('hide.bs.modal', function(){
-        $(this).off('submit.pin.createboard');
-        $(this).off('click.pin.boardlists');
-
-        $(this).removeData("bs.modal");
-        $('.modal-content', $pinModal).html('<p class="loading"><img src="http://www.likewed.com/img/loading.gif"></p>');
+    $(this).on('keyup.pin.boardname', "input[name='name']", function(event){
+        return event.currentTarget.value.trim() ? $("form.board-list-form button", $pinModal).removeClass("disabled") : $("form.board-list-form button", $pinModal).addClass("disabled");
     });
+
+    // $pinModal.on('shown.bs.modal', function(event){
+       
+    // });
+
+    // $pinModal.on('hide.bs.modal', function(){
+    //     $(this).off('submit.pin.createboard');
+    //     $(this).off('click.pin.boardlists');
+    //     $(this).off('click.pin.pin2board', 'button.pin2board');
+
+    //     $(this).removeData("bs.modal");
+    //     $('.modal-content', $pinModal).html('<p class="loading"><img src="http://www.likewed.com/img/loading.gif"></p>');
+    // });
 
     $('img.lazy').lazyload();
 

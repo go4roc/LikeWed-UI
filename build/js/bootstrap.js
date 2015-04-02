@@ -1,6 +1,6 @@
 /*!
  * LikeWed UI v0.0.1 (http://www.likewed.com)
- * Copyright 2014-2014 Rock Peng
+ * Copyright 2014-2015 Rock Peng
  */
 
 if (typeof jQuery === 'undefined') {
