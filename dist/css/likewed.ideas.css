@@ -166,7 +166,7 @@ body {
 }
 /** login modal **/
 #login-modal {
-  margin-top: 10%;
+  padding-top: 10%;
   font-size: 14px;
   text-align: center;
 }
@@ -186,13 +186,16 @@ body {
   width: 70px;
   height: 70px;
   margin-right: 20px;
-  background: url(http://res.htwed.com/ideas/img/login_icons_weibo.png) 0 0 no-repeat;
+  background: url(http://res.htwed.com/ideas/img/login_icons.png) 0 0 no-repeat;
 }
 #login-modal .socialLogin a.weibo:hover {
   background-position: 0 -90px;
 }
-#login-modal .socialLogin a.qzone {
+#login-modal .socialLogin a.wechat {
   background-position: -90px 0;
+}
+#login-modal .socialLogin a.wechat:hover {
+  background-position: -90px -90px;
 }
 #login-modal .socialLogin a.douban {
   background-position: -180px 0;
