@@ -6625,6 +6625,14 @@ a.list-group-item-danger.active:focus {
   line-height: 1.42857143;
   text-align: left;
 }
+.box .box-inner .desc .tags {
+  padding: 5px 20px;
+  margin-top: -10px;
+  color: #5f5f5f;
+}
+.box .box-inner .desc .tags .tag-icon {
+  padding: 0;
+}
 .box .box-inner .desc .author {
   padding: 0 10px 0 10px;
   margin-top: 10px;
